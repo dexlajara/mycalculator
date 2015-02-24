@@ -1,5 +1,3 @@
-package mycalculator;
-
 /**
  * Author: Kristine Elaine P. Bautista
  * Program Description: Calculator of Simple Mathematical Functions
@@ -40,7 +38,9 @@ public class MyCalculator {
 	public int nfactorial(int n){
 		int factorial = 1;
 		
-		for(int i=1;i<n;i++)
+		//will return -1 if input number is less than 0 thus signifying computation error
+		if(n < 0) return -1;
+		for(int i=1;i<=n;i++)
 			factorial *= i;
 		
 		return factorial;
@@ -59,7 +59,8 @@ public class MyCalculator {
 			else return middle;
 		}
 		
-		return 1;
+		//will return -1 if not found
+		return -1;
 	}
 	
 }
